@@ -6,7 +6,11 @@ export default {
   ],
   
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        sans: ['var(--font-pretendard)', 'sans-serif'],
+      }
+    },
   },
 
   plugins:[],
