@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
+//styles
 import "@/styles/globals.css";
 
+//fonts
 import { pretendard } from "fonts";
+
 // import { LangProvider } from '@/context/LangContext';
 
 export const metadata: Metadata = {
