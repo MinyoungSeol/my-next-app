@@ -21,7 +21,9 @@
     "baseUrl": "src/",
     "paths": {
       "@/styles/*": ["app/_styles/*"],
-      "@/components/*": ["app/_components/*"]
+      "@/components/*": ["app/_components/*"],
+      "@/context/*": ["context/*"],
+      "@/locales/*": ["locales/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
