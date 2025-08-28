@@ -21,11 +21,10 @@ export default function RootLayout({ children, }: Readonly <{ children: React.Re
   return (
     <html lang="en">
       <body className={`${pretendard.variable} font-sans antialiased`}>
-
-        <Header />
-
-        {children}
-
+        <LanguageProvider>
+          <Header />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

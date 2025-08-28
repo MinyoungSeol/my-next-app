@@ -12,13 +12,17 @@ export default function Header() {
 
   return (
     <header className="w-full border-b border-b-gray-200">
-
-    {/* Logo */}
+    
       <div className="mx-auto flex h-14 max-w-4xl items-center px-4 justify-between">
+
+        {/* Logo */}
         <h1 className="text-lg font-semibold">
           <Link href="/">MiNY</Link>
         </h1>
+
+        {/* Language Toggle Button */}
         <LangToggleBtn lang={lang} toggleLang={toggleLang}/>
+
       </div>
 
     </header>
