@@ -6,9 +6,11 @@ import "@/styles/globals.css";
 //fonts
 import { pretendard } from "fonts";
 
+//contexts
+import { LanguageProvider } from "@/context/LanguageContext";
+
 //components
 import Header from "@/components/Header";
-// import { LangProvider } from '@/context/LangContext';
 
 export const metadata: Metadata = {
   title: "MiNY's Web Page",
