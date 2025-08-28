@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+
+//styles
+import "@/styles/globals.css";
+
+//fonts
+import { pretendard } from "fonts";
+
+// import { LangProvider } from '@/context/LangContext';
+
+export const metadata: Metadata = {
+  title: "MiNY's Web Page",
+  description: "by Next.js 14",
+};
+
+export default function RootLayout({ children, }: Readonly <{ children: React.ReactNode;}>) {
+  return (
+    <html lang="en">
+      <body className={`${pretendard.variable} font-sans antialiased`}>
+
+        {children}
+
+      </body>
+    </html>
+  );
+}
