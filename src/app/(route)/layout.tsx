@@ -6,7 +6,11 @@ import "@/styles/globals.css";
 //fonts
 import { pretendard } from "fonts";
 
-// import { LangProvider } from '@/context/LangContext';
+//contexts
+import { LanguageProvider } from "@/context/LanguageContext";
+
+//components
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "MiNY's Web Page",
@@ -17,9 +21,10 @@ export default function RootLayout({ children, }: Readonly <{ children: React.Re
   return (
     <html lang="en">
       <body className={`${pretendard.variable} font-sans antialiased`}>
-
-        {children}
-
+        <LanguageProvider>
+          <Header />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
