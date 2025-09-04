@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 //components
 import LangToggleBtn from "./LangToggleBtn";
+import Nav from "./Nav";
 
 export default function Header() {
 
@@ -19,6 +20,9 @@ export default function Header() {
         <h1 className="text-lg font-semibold">
           <Link href="/">MiNY</Link>
         </h1>
+
+        {/* Nav */}
+        <Nav />
 
         {/* Language Toggle Button */}
         <LangToggleBtn lang={lang} toggleLang={toggleLang}/>
