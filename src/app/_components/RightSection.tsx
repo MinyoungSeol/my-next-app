@@ -9,7 +9,7 @@ export default function RightSection() {
     const content = lang === 'en' ? en : ko;
 
     return (
-        <section className="w-full max-w-1/2 min-h-3/4 px-4 py-8 flex-1 flex flex-col items-center justify-center border border-gray-200">
+        <section className="w-full max-w-2/5 min-h-3/4 px-4 py-8 flex-1 flex flex-col items-center justify-center border border-gray-200">
             <p className = "mb-4 text-3xl font-bold">{content["profile-name"]}</p>
             <p className = "text-center text-lg text-gray-700">{content["profile-contact"]}</p>
         </section>

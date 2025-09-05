@@ -9,9 +9,12 @@ export default function LeftSection() {
     const content = lang === 'en' ? en : ko;
 
     return (
-        <section className="w-full max-w-1/2 min-h-3/4 px-4 py-8 mx-4 flex-1 flex flex-col items-center justify-center border border-gray-200">
-            <h2 className = "mb-4 text-3xl font-bold">{content["profile-greeting"]}</h2>
-            <h4 className = "mb-2 text-xl font-medium">{content["profile-intro"]}</h4>
+        <section className="w-full max-w-3/5 min-h-3/4 px-10 py-8 flex-1 flex flex-col items-left justify-center border border-gray-200">
+
+            <h1 className = "mb-4 text-3xl font-bold">{content["profile-greeting"]}</h1>
+            <h2 className = "mb-2 text-lg font-medium">{content["profile-intro"]}</h2>
+            <p className = "text-left text-base text-gray-700 whitespace-pre-line mt-4 max-w-4/5 break-keep">{content["profile-summary"]}</p>
+
         </section>
     );
 }

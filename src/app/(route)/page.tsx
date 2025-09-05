@@ -14,7 +14,7 @@ export default function Home() {
   // const content = lang === 'en' ? en : ko;
 
   return (
-    <main className = "mx-auto h-screen max-w-4xl flex flex-row items-center justify-center px-4 border border-red-200">
+    <main className = "mx-auto h-screen w-full max-w-7xl flex flex-row items-center justify-center px-4 border border-red-200">
 
       {/* <h2 className = "mb-4 text-3xl font-bold">{content.greeting}</h2>
       <p className = "text-center text-lg text-gray-700">{content.intro}</p> */}
