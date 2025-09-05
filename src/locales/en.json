@@ -1,4 +1,6 @@
 {
-  "greeting": "Hello",
-  "intro": "Welcome to my personal website"
+  "profile-greeting": "Hello",
+  "profile-intro": "Welcome to my personal website",
+  "profile-name": "Minyoung Seol (Miny)",
+  "profile-contact": "+1 (647) 308-9091"
 }

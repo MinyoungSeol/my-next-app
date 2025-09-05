@@ -1,4 +1,6 @@
 {
-  "greeting": "안녕하세요",
-  "intro": "히히"
+  "profile-greeting": "안녕하세요",
+  "profile-intro": "환영합니다",
+  "profile-name": "설민영",
+  "profile-contact": "+82 10-5567-7412"
 }
