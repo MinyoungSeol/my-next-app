@@ -11,6 +11,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 
 //components
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "MiNY's Web Page",
@@ -24,6 +25,7 @@ export default function RootLayout({ children, }: Readonly <{ children: React.Re
         <LanguageProvider>
           <Header />
           {children}
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
