@@ -5,5 +5,10 @@
   "profile-name": "설민영",
   "profile-contact": "+82 10-5567-7412",
   "profile-email": "minyoungseol.dev@gmail.com",
-  "profile-language": "한국어 / 영어"
+  "profile-language": "한국어 / 영어",
+  "footer-brand": "접근성과 성능을 고려한 웹 경험을 제공하는\n프론트엔드 개발자입니다!",
+  "footer-quicklink": "빠른 링크",
+  "footer-quicklink-profile": "소개",
+  "footer-quicklink-projects": "작업물",
+  "footer-connect": "다른 링크"
 }

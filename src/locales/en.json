@@ -5,5 +5,10 @@
   "profile-name": "Minyoung Seol (Miny)",
   "profile-contact": "+1 (647) 308-9091",
   "profile-email": "minyoungseol.dev@gmail.com",
-  "profile-language": "English / Korean"
+  "profile-language": "English / Korean",
+  "footer-brand": "Frontend Developer specializing in React, JS/TS, and modern web technologies. Creating accessible and performant web experiences.",
+  "footer-quicklink": "Quick Links",
+  "footer-quicklink-profile": "Profile",
+  "footer-quicklink-projects": "Projects",
+  "footer-connect": "Connect"
 }
