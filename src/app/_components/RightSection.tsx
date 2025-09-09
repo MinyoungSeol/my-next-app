@@ -20,7 +20,7 @@ export default function RightSection() {
             {/* Profile Pic */}
             <div className="flex items-center justify-center mb-6">
                 <div className="relative w-80 h-80 rounded-full overflow-hidden bg-gray-100">
-                    <Image src="/img/profile.png" alt="profile image" fill priority className="object-cover" />
+                    <Image src="/img/profile.png" alt="profile image" fill priority className="object-cover pointer-events-none" />
                 </div>
             </div>
 

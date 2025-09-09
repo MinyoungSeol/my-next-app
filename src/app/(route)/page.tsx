@@ -1,20 +1,13 @@
 'use client';
 
-// import { useLanguage } from "@/context/LanguageContext";
-// import en from "@/locales/en.json";
-// import ko from "@/locales/ko.json";
-
 // components
 import LeftSection from "@/components/LeftSection";
 import RightSection from "@/components/RightSection";
 
 export default function Home() {
 
-  // const { lang } = useLanguage();
-  // const content = lang === 'en' ? en : ko;
-
   return (
-    <main className = "mx-auto h-screen w-full max-w-7xl flex flex-row items-center justify-center px-4 border border-red-200">
+    <main className = "mx-auto h-screen w-full max-w-7xl flex flex-row items-start justify-center px-4 pt-24 border border-red-200">
 
       <LeftSection />
       <RightSection />
