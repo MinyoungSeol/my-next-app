@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="w-full border-b border-b-gray-200">
     
-      <div className="mx-auto flex h-14 max-w-4xl items-center px-4 justify-between">
+      <div className="mx-auto flex h-14 max-w-6xl items-center px-4 justify-between">
 
         {/* Logo */}
         <h1 className="text-lg font-semibold">
