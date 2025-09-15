@@ -18,7 +18,7 @@ export default function Nav() {
     <nav>
         <ul className="flex space-x-4">
             {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
                 return (
                     <li key={link.href}>
                         <Link 
