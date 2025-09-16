@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import projects from "../data";
 import { useLanguage } from "@/context/LanguageContext";
@@ -11,10 +12,30 @@ interface Props {
   params: { slug: string };
 }
 
-export default function ProjectDetail({ params }: Props) {
+export default function ProjectDetail({
+  // const project = projects.find((p) => p.slug === params.slug);
+  // if (!project) return <div className="p-8 my-20 text-center">Project not found</div>;
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { lang } = useLanguage();
-  const project = projects.find((p) => p.slug === params.slug);
-  if (!project) return <div className="p-8 my-20 text-center">Project not found</div>;
+  //Unwrap params with React.use(): future-safe fix for further Next.js versions
+  const { slug } = React.use(params);
+
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return (
+      <div className="w-full max-w-3/5 mx-auto p-8 my-20 text-center">
+        <p className="max-w-3/5 mx-auto text-lg whitespace-pre-line">{lang === "en" ? "Oops!\nProject not found" : "작업물이 존재하지 않습니다."}</p>
+        <Link href="/projects" className="inline-flex items-center gap-2 py-2 text-sm font-medium hover:text-gray-600 transition mt-6">
+          <Icon icon={arrowBack} width="20" height="20" />
+          {lang === "en" ? "Back to Projects" : "작업물 페이지로 돌아가기"}
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <main className="p-8 max-w-4xl mx-auto">
