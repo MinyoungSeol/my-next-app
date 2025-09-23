@@ -22,6 +22,7 @@
     "paths": {
       "@/styles/*": ["app/_styles/*"],
       "@/components/*": ["app/_components/*"],
+      "@/actions/*": ["app/_actions/*"],
       "@/context/*": ["context/*"],
       "@/locales/*": ["locales/*"],
     }
