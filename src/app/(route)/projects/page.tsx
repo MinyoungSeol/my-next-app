@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   const { lang } = useLanguage(); // "en" | "ko"
 
   return (
-    <main className="p-8 max-w-6xl mx-auto">
+    <main className="px-8 pb-24 max-w-6xl mx-auto">
 
       {/* Project main page heading */}
       <h1 className="text-3xl font-bold my-16 text-center">
