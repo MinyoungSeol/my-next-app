@@ -19,26 +19,26 @@ export default function Header() {
   return (
     <header className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-b-gray-200">
 
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 border border-gray-700">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
 
         {/* Logo */}
-        <h1 className="text-lg font-semibold border border-red-700">
+        <h1 className="text-lg font-semibold">
           <Link href="/">MiNY</Link>
         </h1>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6 border border-green-700">
+        <div className="hidden md:flex items-center gap-6">
           <Nav />
         </div>
 
         {/* Desktop Lang Toggle */}
-        <div className="hidden md:block border border-yellow-200">
+        <div className="hidden md:block">
           <LangToggleBtn lang={lang} toggleLang={toggleLang} />
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden p-2 border border-blue-700"
+          className="md:hidden p-2"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle menu"
         >
@@ -51,7 +51,7 @@ export default function Header() {
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
         ${isOpen ? "max-h-96" : "max-h-0"}`}
       >
-        <div className="flex flex-col gap-4 py-3 border border-gray-200">
+        <div className="flex flex-col gap-4 py-3">
           <Nav />
         </div>
 
@@ -65,29 +65,3 @@ export default function Header() {
     </header>
   );
 }
-
-// export default function Header() {
-
-//     const { lang, toggleLang } = useLanguage();
-
-//   return (
-//     <header className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-b-gray-200">
-    
-//       <div className="mx-auto flex h-14 max-w-6xl items-center px-4 justify-between">
-
-//         {/* Logo */}
-//         <h1 className="text-lg font-semibold">
-//           <Link href="/">MiNY</Link>
-//         </h1>
-
-//         {/* Nav */}
-//         <Nav />
-
-//         {/* Language Toggle Button */}
-//         <LangToggleBtn lang={lang} toggleLang={toggleLang}/>
-
-//       </div>
-
-//     </header>
-//   );
-// }

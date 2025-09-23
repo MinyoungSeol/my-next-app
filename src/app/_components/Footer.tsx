@@ -20,10 +20,10 @@ export default function Footer() {
     return(
         <footer className="w-full px-8 py-12 border-t border-t-gray-200">
 
-            <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
                 {/* Brand */}
-                <div className="space-y-4 border border-gray-200">
+                <div className="space-y-4">
                     <h3 className="text-xl font-bold">MiNY</h3>
                     <p className="text-muted-foreground text-sm text-gray-600 whitespace-pre-line break-keep">
                         {content["footer-brand"]}
@@ -31,7 +31,7 @@ export default function Footer() {
                 </div>
 
                 {/* Quick Links */}
-                <div className="space-y-4 border border-gray-200">
+                <div className="space-y-4">
                     <h4 className="font-semibold">{content["footer-quicklink"]}</h4>
                     <nav aria-label="Footer navigation">
                     <ul className="space-y-2">
@@ -56,7 +56,7 @@ export default function Footer() {
                 </div>
 
                 {/* Connect Info */}
-                <div className="space-y-4 border border-gray-200">
+                <div className="space-y-4">
                     <h4 className="font-semibold">{content["footer-connect"]}</h4>
                     <div className="flex gap-4">
                         <a

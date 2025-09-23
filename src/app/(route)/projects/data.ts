@@ -64,13 +64,15 @@ const projects: Project[] = [
         "Simplified structure: Modular code for easier maintenance.",
         "Improved accessibility: Proper contrast, readable fonts, aria-labels added.",
         "Enhanced security: HTTPS, security headers, CORS policies applied.",
-        "Performance optimized: Fonts, images, and animations optimized."
+        "Performance optimized: Fonts, images, and animations optimized.",
+        "Feature enhancement: Implemented multilingual support using React Context API."
       ],
       ko: [
         "구조 단순화: 모듈화로 유지보수 용이.",
         "접근성 개선: 색상 대비, 폰트, aria-label 적용.",
         "보안 강화: HTTPS, 보안 헤더, CORS 적용.",
-        "성능 최적화: 폰트, 이미지, 애니메이션 최적화."
+        "성능 최적화: 폰트, 이미지, 애니메이션 최적화.",
+        "기능 강화: React Context API로 다국어 지원 구현"
       ]
     },
     thumbnail: "/img/profile.png",

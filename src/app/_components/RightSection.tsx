@@ -15,7 +15,7 @@ export default function RightSection() {
     const content = lang === 'en' ? en : ko;
 
     return (
-        <section className="w-full md:max-w-2/5 min-h-3/4 px-4 py-8 flex-1 flex flex-col items-center justify-start border border-gray-200">
+        <section className="w-full md:max-w-2/5 min-h-3/4 px-4 py-8 flex-1 flex flex-col items-center justify-start">
 
             {/* Profile Pic */}
             <div className="flex items-center justify-center mb-6">

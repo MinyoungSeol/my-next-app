@@ -15,7 +15,7 @@ export default function LeftSection() {
     const content = lang === 'en' ? en : ko;
 
     return (
-        <section className="w-full md:max-w-3/5 min-h-3/4 px-10 py-8 flex-1 flex flex-col items-left justify-center border border-gray-200">
+        <section className="w-full md:max-w-3/5 min-h-3/4 px-10 py-8 flex-1 flex flex-col items-left justify-center">
 
             <h1 className = "mb-4 text-3xl font-bold">{content["profile-greeting"]}</h1>
             <h2 className = "mb-2 text-lg font-medium">{content["profile-intro"]}</h2>
