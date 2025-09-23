@@ -15,15 +15,15 @@ export default function Nav() {
   const { lang } = useLanguage();
 
   return(
-    <nav>
-        <ul className="flex space-x-4">
+    <nav className="w-full border border-gray-700">
+        <ul className="flex flex-col md:flex-row space-x-4">
             {navLinks.map((link) => {
                 const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
                 return (
-                    <li key={link.href}>
+                    <li key={link.href} className={`w-full md:w-auto rounded-md ${isActive ? "bg-gray-100 md:bg-transparent" : "" } transition-colors duration-200`}>
                         <Link 
                             href={link.href} 
-                            className={`px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'text-blue-500' : 'text-gray-700 hover:text-blue-500'}`}
+                            className={`block px-3 py-2 rounded-md text-sm text-center font-medium ${isActive ? 'text-blue-500' : 'text-gray-700 hover:text-blue-500'}`}
                         >
                             {link.label[lang]}
                         </Link>
