@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from "react";
+import { setLanguage } from "@/actions/setLanguage";
 
 type Lang = 'en' | 'ko';
 
@@ -12,10 +13,15 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('en');
+export function LanguageProvider({ children, initialLang }: { children: ReactNode, initialLang: Lang }) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
-  const toggleLang = () => setLang((prev) => (prev === 'en' ? 'ko' : 'en'));
+  const setLang = (newLang: Lang) => {
+    setLangState(newLang);
+    setLanguage(newLang); // save to cookie
+  }
+
+  const toggleLang = () => setLang(lang === 'en' ? 'ko' : 'en');
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, toggleLang }}>
