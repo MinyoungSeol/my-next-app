@@ -7,7 +7,7 @@ import RightSection from "@/components/RightSection";
 export default function Home() {
 
   return (
-    <main className = "mx-auto flex flex-col-reverse md:flex-row md:h-screen w-full items-start justify-center px-4 pt-24 border border-red-200">
+    <main className = "w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row h-max w-full items-start justify-center px-4 py-8 md:pt-24 border border-red-200">
 
       <LeftSection />
       <RightSection />
