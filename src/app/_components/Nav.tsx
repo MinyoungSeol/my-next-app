@@ -15,7 +15,7 @@ export default function Nav() {
   const { lang } = useLanguage();
 
   return(
-    <nav className="w-full border border-gray-700">
+    <nav className="w-full">
         <ul className="flex flex-col md:flex-row space-x-4">
             {navLinks.map((link) => {
                 const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
