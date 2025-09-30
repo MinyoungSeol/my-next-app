@@ -2,15 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import projects from "../data";
 import { useLanguage } from "@/context/LanguageContext";
 
 import { Icon } from '@iconify/react';
 import arrowBack from "@iconify/icons-mdi/arrow-back";
 
-interface Props {
-  params: { slug: string };
-}
+// interface Props {
+//   params: { slug: string };
+// }
 
 export default function ProjectDetail({
   // const project = projects.find((p) => p.slug === params.slug);
@@ -71,7 +72,7 @@ export default function ProjectDetail({
       <span className="text-sm text-gray-500">{project.date}</span>
 
       {/* Project image */}
-      <img
+      <Image
         src={project.thumbnail}
         alt={project.title[lang]}
         className="w-full h-80 object-cover rounded mb-6"

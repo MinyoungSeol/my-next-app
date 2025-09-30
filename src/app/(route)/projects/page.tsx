@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import projects from "./data";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -22,7 +23,7 @@ export default function ProjectsPage() {
           <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
 
             <div className="border rounded-lg border-gray-200 overflow-hidden hover:shadow-lg transition">
-              <img
+              <Image
                 src={project.thumbnail}
                 alt={project.title[lang]}
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform"

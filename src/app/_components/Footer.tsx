@@ -1,7 +1,6 @@
 'use client';
 
 import Link from "next/link";
-
 import { useLanguage } from "@/context/LanguageContext";
 import en from "@/locales/en.json";
 import ko from "@/locales/ko.json";
@@ -15,7 +14,7 @@ export default function Footer() {
     const { lang } = useLanguage();
     const content = lang === 'en' ? en : ko;
 
-    const currentYear = new Date().getFullYear();
+    // const currentYear = new Date().getFullYear();
     
     return(
         <footer className="w-full px-8 py-12 border-t border-t-gray-200">
@@ -36,20 +35,20 @@ export default function Footer() {
                     <nav aria-label="Footer navigation">
                     <ul className="space-y-2">
                         <li>
-                        <a 
+                        <Link 
                             href="/" 
                             className="text-muted-foreground hover:text-foreground transition-colors text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                         >
                             {content["footer-quicklink-profile"]}
-                        </a>
+                        </Link>
                         </li>
                         <li>
-                        <a 
+                        <Link 
                             href="/projects" 
                             className="text-muted-foreground hover:text-foreground transition-colors text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                         >
                             {content["footer-quicklink-projects"]}
-                        </a>
+                        </Link>
                         </li>
                     </ul>
                     </nav>
