@@ -17,7 +17,7 @@ export default function Header() {
   const { lang, toggleLang } = useLanguage();
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-b-gray-200">
+    <header className="w-full sticky top-0 z-50 bg-white md:bg-white/70 md:backdrop-blur-md border-b border-b-gray-200">
 
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
 

@@ -15,10 +15,11 @@ import { cookies } from "next/headers";
 //components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FadeWrapper from "@/components/FadeWrapper";
 
 export const metadata: Metadata = {
   title: "MiNY's Web Page",
-  description: "by Next.js 14",
+  description: "by Next.js",
 };
 
 export default async function RootLayout({ children, }: Readonly <{ children: React.ReactNode;}>) {
@@ -31,7 +32,7 @@ export default async function RootLayout({ children, }: Readonly <{ children: Re
       <body className={`${pretendard.variable} font-sans antialiased`}>
         <LanguageProvider initialLang={initialLang}>
           <Header />
-          {children}
+          <FadeWrapper>{children}</FadeWrapper>
           <Footer />
         </LanguageProvider>
       </body>

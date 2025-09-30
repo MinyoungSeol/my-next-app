@@ -111,7 +111,11 @@ export default function ProjectDetail({
 
         {/* Solutions */}
         {project.solution && (
-          <div className="lg:w-1/2">
+          <div
+            className={`${
+              project.problemHeading ? "lg:w-1/2" : "lg:w-full"
+            }`}
+          >
             <h2 className="text-2xl font-semibold mb-3">
               {lang === "ko" ? "해결 방안" : "Solutions"}
             </h2>
@@ -124,28 +128,32 @@ export default function ProjectDetail({
         )}
       </section>
 
-      {/* Github code */}
-      {project.github && (
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
-        >
-          {lang === "en" ? "GitHub Code" : "GitHub 코드"}
-        </a>
-      )}
-      {/* Demo link */}
-      {project.demo && (
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-500 transition ml-4"
-        >
-          {lang === "en" ? "Live Demo" : "페이지 보기"}
-        </a>
-      )}
+
+      <section className="mb-8">
+        {/* Github code */}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+          >
+            {lang === "en" ? "GitHub Code" : "GitHub 코드"}
+          </a>
+        )}
+        {/* Demo link */}
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-500 transition ml-4"
+          >
+            {lang === "en" ? "Live Demo" : "페이지 보기"}
+          </a>
+        )}
+      </section>
+      
 
     </main>
   );
