@@ -23,11 +23,16 @@ export default function ProjectsPage() {
           <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
 
             <div className="border rounded-lg border-gray-200 overflow-hidden hover:shadow-lg transition">
-              <Image
-                src={project.thumbnail}
-                alt={project.title[lang]}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
-              />
+
+              <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                  src={project.thumbnail}
+                  alt={project.title[lang]}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
 
               <div className="p-4">
                 <h2 className="text-lg font-semibold">{project.title[lang]}</h2>

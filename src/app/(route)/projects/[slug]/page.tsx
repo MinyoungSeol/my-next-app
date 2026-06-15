@@ -72,11 +72,17 @@ export default function ProjectDetail({
       <span className="text-sm text-gray-500">{project.date}</span>
 
       {/* Project image */}
-      <Image
-        src={project.thumbnail}
-        alt={project.title[lang]}
-        className="w-full h-80 object-cover rounded mb-6"
-      />
+      <div className="relative w-full h-80 mb-6 overflow-hidden rounded">
+        <Image
+          src={project.thumbnail}
+          alt={project.title[lang]}
+          fill
+          priority // Ensure the image loads immediately for better UX
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          className="object-cover"
+        />
+      </div>
+
 
       {/* Project description */}
       <p className="mb-6">{project.description[lang]}</p>
