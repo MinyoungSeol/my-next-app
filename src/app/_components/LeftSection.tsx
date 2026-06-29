@@ -23,7 +23,7 @@ export default function LeftSection() {
             <p className = "text-left text-base text-gray-700 whitespace-pre-line mt-4 max-w-4/5 break-keep">{content["profile-summary"]}</p>
 
             <p className = "mt-10 text-lg font-bold">{content["profile-opentojob"]}</p>
-            <a href="/Minyoung_Resume.pdf" download className="inline-block w-fit bg-gray-800 text-white px-6 py-3 my-4 rounded-lg hover:bg-gray-700 transition">
+            <a href={lang === 'en' ? '/Minyoung_Resume.pdf' : '/Minyoung_Resume_KR.pdf'} download className="inline-block w-fit bg-gray-800 text-white px-6 py-3 my-4 rounded-lg hover:bg-gray-700 transition">
                 <Icon icon={downloadIcon} width="20" height="20" className="inline-block mr-2 -mt-1"/>
                 {content["profile-resume"]}
             </a>
